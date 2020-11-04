@@ -78,6 +78,6 @@ module.exports = {
       options: {
         outputPath: `src/types/gatsby-types.d.ts`,
       },
-    }
+    },
   ],
-}
+};
