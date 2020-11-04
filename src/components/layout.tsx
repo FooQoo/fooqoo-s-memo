@@ -1,29 +1,29 @@
-import React from "react"
-import { Link } from "gatsby"
-import { HistoryLocation } from '@reach/router'
+import React from 'react';
+import { Link } from 'gatsby';
+import { HistoryLocation } from '@reach/router';
 
 type Props = {
-  location: HistoryLocation,
-  title: string
-}
+  location: HistoryLocation;
+  title: string;
+};
 
 const Layout: React.FC<Props> = ({ location, title, children }) => {
-  const rootPath = `${__PATH_PREFIX__}/`
-  const isRootPath = location.pathname === rootPath
-  let header
+  const rootPath = `${__PATH_PREFIX__}/`;
+  const isRootPath = location.pathname === rootPath;
+  let header;
 
   if (isRootPath) {
     header = (
       <h1 className="main-heading">
         <Link to="/">{title}</Link>
       </h1>
-    )
+    );
   } else {
     header = (
       <Link className="header-link-home" to="/">
         {title}
       </Link>
-    )
+    );
   }
 
   return (
@@ -36,7 +36,7 @@ const Layout: React.FC<Props> = ({ location, title, children }) => {
         <a href="https://www.gatsbyjs.com">Gatsby</a>
       </footer>
     </div>
-  )
-}
+  );
+};
 
-export default Layout
+export default Layout;
