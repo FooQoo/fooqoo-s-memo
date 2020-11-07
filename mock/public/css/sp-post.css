@@ -254,6 +254,8 @@
   overflow: hidden;
   position: relative;
   width: 299px;
+  background: #fff url('/assets/search.svg') 9.0rem 0.0rem no-repeat;
+  background-size: 10%;
 }
 .post .signature {
   background-color: transparent;

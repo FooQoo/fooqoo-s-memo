@@ -167,7 +167,7 @@
   padding: 26px 56px;
   width: auto;
 }
-.post .frame {
+.post .search {
   background-color: white;
   border-radius: 32px;
   flex-shrink: 0;
@@ -176,6 +176,8 @@
   overflow: hidden;
   position: relative;
   width: 40px;
+  background: #fff url('/assets/search.svg') 1.0rem 1.0rem no-repeat;
+  background-size: 50%;
 }
 .post .header {
   align-items: flex-start;
