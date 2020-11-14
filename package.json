@@ -1,9 +1,9 @@
 {
-  "name": "gatsby-starter-blog",
+  "name": "fooqoo-memo",
   "private": true,
-  "description": "A starter for a blog powered by Gatsby and Markdown",
-  "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "description": "My blog powered by Gatsby and Markdown",
+  "version": "1.0.0",
+  "author": "FooQoo",
   "bugs": {
     "url": "https://github.com/gatsbyjs/gatsby/issues"
   },
@@ -50,7 +50,6 @@
     "prettier": "^2.1.2",
     "ts-node": "^9.0.0"
   },
-  "homepage": "https://github.com/gatsbyjs/gatsby-starter-blog#readme",
   "keywords": [
     "gatsby"
   ],
@@ -58,7 +57,7 @@
   "main": "n/a",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/gatsbyjs/gatsby-starter-blog.git"
+    "url": "git+https://github.com/FooQoo/gatsby-blog.git"
   },
   "scripts": {
     "typecheck": "tsc",
@@ -67,7 +66,6 @@
     "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\"",
     "start": "npm run develop",
     "serve": "gatsby serve",
-    "clean": "gatsby clean",
-    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
+    "clean": "gatsby clean"
   }
 }
