@@ -6,6 +6,9 @@ import SEO from '../components/seo';
 
 import { PageProps } from 'gatsby';
 
+/**
+ * 404ページ
+ */
 const NotFoundPage: React.FC<PageProps<GatsbyTypes.NotFoundQuery>> = ({
   data,
   location,

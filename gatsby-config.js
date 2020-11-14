@@ -79,5 +79,6 @@ module.exports = {
         outputPath: `src/types/gatsby-types.d.ts`,
       },
     },
+    `gatsby-plugin-sass`,
   ],
 };

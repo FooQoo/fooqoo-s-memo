@@ -1,6 +1,9 @@
 const path = require(`path`);
 const { createFilePath } = require(`gatsby-source-filesystem`);
 
+/**
+ * createPages
+ */
 exports.createPages = async ({ graphql, actions, reporter }) => {
   const { createPage } = actions;
 
@@ -59,6 +62,9 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
   }
 };
 
+/**
+ * onCreateNode
+ */
 exports.onCreateNode = ({ node, actions, getNode }) => {
   const { createNodeField } = actions;
 
@@ -73,6 +79,9 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
   }
 };
 
+/**
+ * createSchemaCustomization
+ */
 exports.createSchemaCustomization = ({ actions }) => {
   const { createTypes } = actions;
 
