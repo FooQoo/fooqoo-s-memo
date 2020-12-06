@@ -9,12 +9,13 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
 
   // Define a template for blog post
   const blogPost = path.resolve(`./src/templates/blog-post.tsx`);
+  const categoryPage = path.resolve(`./src/templates/category.tsx`);
 
   // Get all markdown blog posts sorted by date
   const result = await graphql(
     `
       {
-        allMarkdownRemark(
+        blogposts: allMarkdownRemark(
           sort: { fields: [frontmatter___date], order: ASC }
           limit: 1000
         ) {
@@ -23,6 +24,12 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
             fields {
               slug
             }
+          }
+        }
+        categories: allMarkdownRemark(limit: 1000) {
+          group(field: frontmatter___category) {
+            fieldValue
+            totalCount
           }
         }
       }
@@ -37,7 +44,9 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
     return;
   }
 
-  const posts = result.data.allMarkdownRemark.nodes;
+  // GraphQLの取得結果
+  const posts = result.data.blogposts.nodes;
+  const categories = result.data.categories.group;
 
   // Create blog posts pages
   // But only if there's at least one markdown file found at "content/blog" (defined in gatsby-config.js)
@@ -56,6 +65,18 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
           id: post.id,
           previousPostId,
           nextPostId,
+        },
+      });
+    });
+  }
+
+  if (categories.length > 0) {
+    categories.forEach(category => {
+      createPage({
+        path: `/${category.fieldValue}`,
+        component: categoryPage,
+        context: {
+          category: category.fieldValue,
         },
       });
     });

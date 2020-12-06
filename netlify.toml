@@ -1,0 +1,52 @@
+[[headers]]
+for = "/*"
+[headers.values]
+Content-Security-Policy = "form-action https:"
+Feature-Policy = "vibrate 'none'; geolocation 'none'; midi 'none'; notifications 'none'; push 'none'; sync-xhr 'none'; microphone 'none'; camera 'none'; magnetometer 'none'; gyroscope 'none'; speaker 'none'; vibrate 'none'; fullscreen 'none'; payment 'none'"
+Referrer-Policy = "strict-origin-when-cross-origin"
+Strict-Transport-Security = "max-age=2592000"
+X-Content-Type-Options = "nosniff"
+X-Frame-Options = "DENY"
+X-XSS-Protection = "1; mode=block"
+
+[[redirects]]
+force = true
+from = "/image/:id/:path/:name"
+headers = {X-From = "Netlify"}
+status = 200
+to = "https://res.cloudinary.com/fooqoo/image/upload/f_auto,q_auto:low,w_600/:id/maruzen-hudosan/:path/:name"
+
+[[redirects]]
+force = true
+from = "/large-image/:id/:path/:name"
+headers = {X-From = "Netlify"}
+status = 200
+to = "https://res.cloudinary.com/fooqoo/image/upload/f_auto,q_auto:low,w_1300/:id/maruzen-hudosan/:path/:name"
+
+[[redirects]]
+force = true
+from = "/small-image/:id/:path/:name"
+headers = {X-From = "Netlify"}
+status = 200
+to = "https://res.cloudinary.com/fooqoo/image/upload/f_auto,q_auto:low,w_100/:id/maruzen-hudosan/:path/:name"
+
+[[redirects]]
+force = true
+from = "/original-image/:id/:path/:name"
+headers = {X-From = "Netlify"}
+status = 200
+to = "https://res.cloudinary.com/fooqoo/image/upload/:id/maruzen-hudosan/:path/:name"
+
+[[redirects]]
+force = true
+from = "/original-image/:id/:path1/:path2/:name"
+headers = {X-From = "Netlify"}
+status = 200
+to = "https://res.cloudinary.com/fooqoo/image/upload/:id/maruzen-hudosan/:path1/:path2/:name"
+
+[[redirects]]
+force = true
+from = "/image/:id/:path1/:path2/:name"
+headers = {X-From = "Netlify"}
+status = 200
+to = "https://res.cloudinary.com/fooqoo/image/upload/f_auto,q_auto:low,w_600/:id/maruzen-hudosan/:path1/:path2/:name"

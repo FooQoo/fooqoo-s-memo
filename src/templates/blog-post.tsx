@@ -19,20 +19,28 @@ const BlogPostTemplate: React.FC<PageProps<
         title={post?.frontmatter?.title || ''}
         description={post?.frontmatter?.description || post?.excerpt}
       />
-      <article
-        className="blog-post"
-        itemScope
-        itemType="http://schema.org/Article"
-      >
-        <div>
-          <h1 itemProp="headline">{post?.frontmatter?.title}</h1>
-          <p>{post?.frontmatter?.date}</p>
+      <div className="container">
+        <div className="columns is-mobile is-centered">
+          <div className="column is-two-thirds">
+            <section>
+              <article
+                className="blog-post"
+                itemScope
+                itemType="http://schema.org/Article"
+              >
+                <div>
+                  <h2 itemProp="headline">{post?.frontmatter?.title}</h2>
+                  <p>{post?.frontmatter?.date}</p>
+                </div>
+                <section
+                  dangerouslySetInnerHTML={{ __html: post?.html || '' }}
+                  itemProp="articleBody"
+                />
+              </article>
+            </section>
+          </div>
         </div>
-        <section
-          dangerouslySetInnerHTML={{ __html: post?.html || '' }}
-          itemProp="articleBody"
-        />
-      </article>
+      </div>
     </Layout>
   );
 };
