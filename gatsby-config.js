@@ -10,6 +10,7 @@ module.exports = {
     social: {
       twitter: `FooQoo17`,
     },
+    image: `https://res.cloudinary.com/fooqoo/image/upload/v1588754816/fooqoo%20memo/beluga_jwpply.jpg`,
   },
   plugins: [
     {

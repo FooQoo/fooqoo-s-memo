@@ -17,9 +17,26 @@ const NotFoundPage: React.FC<PageProps<GatsbyTypes.NotFoundQuery>> = ({
 
   return (
     <Layout location={location} title={siteTitle}>
-      <SEO title="404: Not Found" />
-      <h1>404: Not Found</h1>
-      <p>You just hit a route that doesn&#39;t exist... the sadness.</p>
+      <SEO title="Not Found" />
+      <div className="container">
+        <div className="columns is-mobile is-centered has-text-centered">
+          <div className="column is-two-thirds">
+            <section>
+              <article
+                className="blog-post"
+                itemScope
+                itemType="http://schema.org/Article"
+                style={{ padding: '120px 0' }}
+              >
+                <h1>404: Not Found</h1>
+                <p>
+                  You just hit a route that doesn&#39;t exist... the sadness.
+                </p>
+              </article>
+            </section>
+          </div>
+        </div>
+      </div>
     </Layout>
   );
 };

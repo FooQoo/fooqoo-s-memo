@@ -30,6 +30,7 @@ const SEO: React.FC<SeoProps> = ({ description, lang, meta, title }) => {
           social {
             twitter
           }
+          image
         }
       }
     }
@@ -37,6 +38,7 @@ const SEO: React.FC<SeoProps> = ({ description, lang, meta, title }) => {
 
   const metaDescription = description || site?.siteMetadata?.description;
   const defaultTitle = site?.siteMetadata?.title;
+  const image = site?.siteMetadata?.image;
 
   return (
     <Helmet
@@ -63,6 +65,10 @@ const SEO: React.FC<SeoProps> = ({ description, lang, meta, title }) => {
           content: `website`,
         },
         {
+          property: `og:image`,
+          content: image,
+        },
+        {
           name: `twitter:card`,
           content: `summary`,
         },
@@ -72,7 +78,7 @@ const SEO: React.FC<SeoProps> = ({ description, lang, meta, title }) => {
         },
         {
           name: `twitter:title`,
-          content: title,
+          content: defaultTitle,
         },
         {
           name: `twitter:description`,
