@@ -8,9 +8,9 @@ import Profile from '../components/profile';
 import BlogListItem from '../components/blog-list-item';
 
 /**
- * 記事一覧ページ
+ * カテゴリーページ
  */
-const BlogIndex: React.FC<PageProps<GatsbyTypes.BlogIndexQuery>> = ({
+const Category: React.FC<PageProps<GatsbyTypes.CategoryQuery>> = ({
   data,
   location,
 }) => {
@@ -63,10 +63,10 @@ const BlogIndex: React.FC<PageProps<GatsbyTypes.BlogIndexQuery>> = ({
   );
 };
 
-export default BlogIndex;
+export default Category;
 
 export const pageQuery = graphql`
-  query BlogIndex {
+  query Category($category: String!) {
     site {
       siteMetadata {
         title
@@ -75,7 +75,7 @@ export const pageQuery = graphql`
     allMarkdownRemark(
       limit: 1000
       sort: { fields: [frontmatter___date], order: DESC }
-      filter: { frontmatter: { category: { ne: "daily" } } }
+      filter: { frontmatter: { category: { eq: $category } } }
     ) {
       nodes {
         excerpt

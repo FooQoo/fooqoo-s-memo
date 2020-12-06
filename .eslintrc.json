@@ -1,0 +1,45 @@
+{
+  "env": {
+    "commonjs": true,
+    "es6": true,
+    "node": true
+  },
+  "extends": [
+    "airbnb-base",
+    "eslint:recommended",
+    "plugin:@typescript-eslint/eslint-recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:prettier/recommended",
+    "prettier/@typescript-eslint"
+  ],
+  "globals": {
+    "Atomics": "readonly",
+    "SharedArrayBuffer": "readonly"
+  },
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaVersion": 2018,
+    "sourceType": "module",
+    "project": "./tsconfig.json"
+  },
+  "plugins": ["react", "@typescript-eslint"],
+  "rules": {
+    "import/extensions": [".js", ".jsx", ".json", ".ts", ".tsx"],
+    "no-var": "error",
+    "semi": "error",
+    "block-spacing": "error",
+    "indent": ["error", 2],
+    "no-mixed-spaces-and-tabs": "error",
+    "no-multiple-empty-lines": ["error", { "max": 1 }],
+    "no-trailing-spaces": "error",
+    "space-infix-ops": "error",
+    "dot-notation": "error",
+    "eqeqeq": "error",
+    "no-else-return": "error",
+    "no-loop-func": "error",
+    "arrow-parens": "error",
+    "arrow-spacing": "error",
+    "no-console": "warn",
+    "no-undef": "off"
+  }
+}

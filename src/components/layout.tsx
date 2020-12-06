@@ -1,42 +1,95 @@
-import React from "react"
-import { Link } from "gatsby"
-import { HistoryLocation } from '@reach/router'
+import React, { useState } from 'react';
+import { Link } from 'gatsby';
+import { HistoryLocation } from '@reach/router';
 
-type Props = {
-  location: HistoryLocation,
-  title: string
+/**
+ * ナビゲーションのメニュー
+ */
+interface NavMenuProps {
+  open: boolean;
 }
 
-const Layout: React.FC<Props> = ({ location, title, children }) => {
-  const rootPath = `${__PATH_PREFIX__}/`
-  const isRootPath = location.pathname === rootPath
-  let header
+const NavMenu: React.FC<NavMenuProps> = ({ open }) => {
+  return (
+    <div id="navMenu" className={`navbar-menu ${open && 'is-active'}`}>
+      <div
+        className="navbar-start has-text-centered"
+        style={{ flexGrow: 1, justifyContent: 'center' }}
+      >
+        <Link className="navbar-item is-hoverable" to="/">
+          ホーム
+        </Link>
+        <Link className="navbar-item is-hoverable" to="/daily">
+          日記
+        </Link>
+        <Link className="navbar-item is-hoverable" to="/dev">
+          開発
+        </Link>
+        <Link className="navbar-item is-hoverable" to="/life-hack">
+          ライフハック
+        </Link>
+      </div>
+    </div>
+  );
+};
 
-  if (isRootPath) {
-    header = (
-      <h1 className="main-heading">
-        <Link to="/">{title}</Link>
-      </h1>
-    )
-  } else {
-    header = (
-      <Link className="header-link-home" to="/">
-        {title}
-      </Link>
-    )
-  }
+/**
+ * ハンバーガーメニュー
+ */
+interface HamburgerMenuProps {
+  onClick: (event: React.MouseEvent<HTMLInputElement>) => void;
+  open: boolean;
+}
+
+const HamburgerMenu: React.FC<HamburgerMenuProps> = ({ onClick, open }) => {
+  return (
+    <div
+      className={`navbar-burger burger ${open && 'is-active'}`}
+      data-target="navMenu"
+      onClick={onClick}
+    >
+      <span />
+      <span />
+      <span />
+    </div>
+  );
+};
+
+type LayoutProps = {
+  location: HistoryLocation;
+  title: string;
+};
+
+/**
+ * レイアウトコンポーネント
+ */
+const Layout: React.FC<LayoutProps> = ({ location, title, children }) => {
+  const header = (
+    <h1 className="main-heading">
+      <Link to="/">{title}</Link>
+    </h1>
+  );
+
+  const intialState = false;
+  const [open, setOpen] = useState(intialState);
+  const toggle = () => setOpen(!open);
 
   return (
-    <div className="global-wrapper" data-is-root-path={isRootPath}>
-      <header className="global-header">{header}</header>
-      <main>{children}</main>
-      <footer>
-        © {new Date().getFullYear()}, Built with
-        {` `}
-        <a href="https://www.gatsbyjs.com">Gatsby</a>
-      </footer>
-    </div>
-  )
-}
+    <div className="global-wrapper">
+      <nav>
+        <div className="navbar-brand container">
+          {header}
+          <HamburgerMenu onClick={toggle} open={open} />
+        </div>
 
-export default Layout
+        <NavMenu open={open} />
+      </nav>
+      <main>{children}</main>
+      <div className="container">
+        <footer>&copy; {new Date().getFullYear()}, FooQoo.</footer>
+      </div>
+    </div>
+  );
+};
+
+export default Layout;
