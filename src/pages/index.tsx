@@ -29,7 +29,7 @@ const BlogIndex: React.FC<PageProps<GatsbyTypes.BlogIndexQuery>> = ({
 
   return (
     <Layout location={location} title={siteTitle}>
-      <SEO title="All posts" />
+      <SEO title="HOME" />
       <div className="container has-text-left post-list-item">
         <div className="columns">
           <div className="column is-two-thirds">
