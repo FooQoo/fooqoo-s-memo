@@ -78,7 +78,7 @@ const SEO: React.FC<SeoProps> = ({ description, lang, meta, title }) => {
         },
         {
           name: `twitter:title`,
-          content: title,
+          content: defaultTitle,
         },
         {
           name: `twitter:description`,

@@ -18,7 +18,9 @@ const BlogListItem: React.FC<{
         <div className="header">
           <h2>
             <Link to={link} itemProp="url">
-              <span itemProp="headline">{title}</span>
+              <span itemProp="headline" style={{ color: '#111111' }}>
+                {title}
+              </span>
             </Link>
           </h2>
           <small>{date}</small>
