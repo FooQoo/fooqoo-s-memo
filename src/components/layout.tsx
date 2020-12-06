@@ -65,7 +65,7 @@ type LayoutProps = {
  */
 const Layout: React.FC<LayoutProps> = ({ location, title, children }) => {
   const header = (
-    <h1 className="main-heading" style={{ padding: '50px 0' }}>
+    <h1 className="main-heading">
       <Link to="/">{title}</Link>
     </h1>
   );

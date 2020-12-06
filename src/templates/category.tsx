@@ -30,7 +30,7 @@ const Category: React.FC<PageProps<GatsbyTypes.CategoryQuery>> = ({
   return (
     <Layout location={location} title={siteTitle}>
       <SEO title="All posts" />
-      <div className="container has-text-left">
+      <div className="container has-text-left post-list-item">
         <div className="columns">
           <div className="column is-two-thirds">
             <section>
