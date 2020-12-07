@@ -13,7 +13,7 @@ public_folder: /img
 
 collections:
   - name: 'daily'
-    label: 'Blog'
+    label: '日記'
     folder: 'content/blog/daily'
     create: true
     slug: '{{slug}}'
