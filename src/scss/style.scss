@@ -1,7 +1,6 @@
 @import '../../node_modules/bulma/sass/utilities/initial-variables.sass';
 @import '~bulma';
 
-@import 'general';
 @import 'root';
 @import 'element';
 @import 'profileCard';
@@ -37,8 +36,12 @@
   margin-bottom: var(--spacing-8);
   margin-top: var(--spacing-8);
   width: 95%;
-  p {
-    margin-bottom: var(--spacing-0);
+
+  .description {
+    padding-right: 10%;
+    p {
+      margin-bottom: var(--spacing-0);
+    }
   }
 
   h2 {
@@ -50,6 +53,9 @@
 
   .header {
     margin-bottom: var(--spacing-4);
+    span {
+      color: #556688;
+    }
   }
 }
 
@@ -74,6 +80,9 @@
 
 /* Post */
 .blog-post {
+  .not-found {
+    padding: 120px 0;
+  }
   header {
     h1 {
       margin: var(--spacing-0) var(--spacing-0) var(--spacing-4)
@@ -88,4 +97,9 @@
   &-nav ul {
     margin: var(--spacing-0);
   }
+}
+
+.nav-item {
+  flex-grow: 1;
+  justify-content: center;
 }

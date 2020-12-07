@@ -23,15 +23,12 @@ const NotFoundPage: React.FC<PageProps<GatsbyTypes.NotFoundQuery>> = ({
           <div className="column is-two-thirds">
             <section>
               <article
-                className="blog-post"
+                className="blog-post not-found"
                 itemScope
                 itemType="http://schema.org/Article"
-                style={{ padding: '120px 0' }}
               >
-                <h1>404: Not Found</h1>
-                <p>
-                  You just hit a route that doesn&#39;t exist... the sadness.
-                </p>
+                <h1>Not Found</h1>
+                <p>お探しのページは、移動または削除された可能性があります</p>
               </article>
             </section>
           </div>
