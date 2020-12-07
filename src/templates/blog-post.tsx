@@ -21,7 +21,7 @@ const BlogPostTemplate: React.FC<PageProps<
       />
       <div className="container">
         <div className="columns is-mobile is-centered">
-          <div className="column is-two-thirds">
+          <div className="column is-11-mobile is-8-desktop">
             <section>
               <article
                 className="blog-post"

@@ -12,10 +12,7 @@ interface NavMenuProps {
 const NavMenu: React.FC<NavMenuProps> = ({ open }) => {
   return (
     <div id="navMenu" className={`navbar-menu ${open && 'is-active'}`}>
-      <div
-        className="navbar-start has-text-centered"
-        style={{ flexGrow: 1, justifyContent: 'center' }}
-      >
+      <div className="navbar-start has-text-centered nav-item">
         <Link className="navbar-item is-hoverable" to="/">
           ホーム
         </Link>

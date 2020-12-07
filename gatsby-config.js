@@ -9,6 +9,8 @@ module.exports = {
     siteUrl: `https://fooqoo56.com/`,
     social: {
       twitter: `FooQoo17`,
+      facebook: `fooqoo56`,
+      github: `FooQoo`,
     },
     image: `https://res.cloudinary.com/fooqoo/image/upload/v1588754816/fooqoo%20memo/beluga_jwpply.jpg`,
   },

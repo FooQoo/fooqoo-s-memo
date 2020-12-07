@@ -18,14 +18,12 @@ const BlogListItem: React.FC<{
         <div className="header">
           <h2>
             <Link to={link} itemProp="url">
-              <span itemProp="headline" style={{ color: '#111111' }}>
-                {title}
-              </span>
+              <span itemProp="headline">{title}</span>
             </Link>
           </h2>
           <small>{date}</small>
         </div>
-        <section style={{ paddingRight: '10%' }}>
+        <section className="description">
           <p
             dangerouslySetInnerHTML={{
               __html: innerHtml,
