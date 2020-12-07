@@ -1,0 +1,33 @@
+backend:
+  name: git-gateway
+  branch: master
+  commit_messages:
+    create: 'Create {{collection}} “{{slug}}”'
+    update: 'Update {{collection}} “{{slug}}”'
+    delete: 'Delete {{collection}} “{{slug}}”'
+    uploadMedia: '[skip ci] Upload “{{path}}”'
+    deleteMedia: '[skip ci] Delete “{{path}}”'
+
+media_folder: static/img
+public_folder: /img
+
+collections:
+  - name: 'daily'
+    label: 'Blog'
+    folder: 'content/blog/daily'
+    create: true
+    slug: '{{slug}}'
+    editor:
+      preview: true # プレビュー表示を有効化
+    publish_mode: editorial_workflow # ワークフロー管理を有効化
+    fields:
+      - { label: 'Title', name: 'title', widget: 'string' }
+      - { label: 'Publish Date', name: 'date', widget: 'datetime' }
+      - { label: 'Description', name: 'description', widget: 'string' }
+      - {
+          label: 'Category',
+          name: 'category',
+          widget: 'hidden',
+          default: 'daily',
+        }
+      - { label: 'Body', name: 'body', widget: 'markdown' }
