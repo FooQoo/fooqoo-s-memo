@@ -3,6 +3,7 @@ title: 自粛期間はAmazon Prime三昧
 date: '2020-05-25T22:12:03.284Z'
 description: '自粛期間中はAmazon Prime Videoで映画やアニメをたくさんみました。私の鑑賞したものについてご紹介します。'
 category: 'life-hack'
+img: 'https://res.cloudinary.com/fooqoo/image/upload/v1590332370/fooqoo%20memo/three-woman-watch-a-glowing-white-screen-in-a-dark-room_ntxv9r.jpg'
 ---
 
 自粛期間中は[Amazon Prime Video](https://amzn.to/2yxBstC)で映画やアニメをたくさんみました。

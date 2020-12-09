@@ -3,7 +3,6 @@
 
 @import 'root';
 @import 'element';
-@import 'profileCard';
 
 /* Layout */
 .global {
@@ -38,10 +37,14 @@
   width: 95%;
 
   .description {
-    padding-right: 10%;
     p {
       margin-bottom: var(--spacing-0);
     }
+  }
+
+  &-image {
+    height: auto;
+    width: 80%;
   }
 
   h2 {
@@ -103,3 +106,5 @@
   flex-grow: 1;
   justify-content: center;
 }
+
+@import 'profileCard';

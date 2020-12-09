@@ -126,6 +126,8 @@ exports.createSchemaCustomization = ({ actions }) => {
 
     type Social {
       twitter: String
+      facebook: String
+      github: String
     }
 
     type MarkdownRemark implements Node {
@@ -137,6 +139,7 @@ exports.createSchemaCustomization = ({ actions }) => {
       title: String
       description: String
       date: Date @dateformat
+      img: String
     }
 
     type Fields {
