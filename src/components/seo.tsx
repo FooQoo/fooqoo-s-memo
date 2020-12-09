@@ -45,8 +45,8 @@ const SEO: React.FC<SeoProps> = ({ description, lang, meta, title }) => {
       htmlAttributes={{
         lang,
       }}
-      title={title}
-      titleTemplate={defaultTitle ? `%s | ${defaultTitle}` : undefined}
+      title={defaultTitle}
+      titleTemplate={title ? `${title} | %s` : undefined}
       meta={[
         {
           name: `description`,
@@ -78,7 +78,7 @@ const SEO: React.FC<SeoProps> = ({ description, lang, meta, title }) => {
         },
         {
           name: `twitter:title`,
-          content: defaultTitle,
+          content: title,
         },
         {
           name: `twitter:description`,
