@@ -15,22 +15,24 @@ const NotFoundPage: React.FC<PageProps<GatsbyTypes.NotFoundQuery>> = ({
 }) => {
   const siteTitle = data.site?.siteMetadata?.title || '';
 
+  const notFound = (
+    <article
+      className="blog-post not-found"
+      itemScope
+      itemType="http://schema.org/Article"
+    >
+      <h1>Not Found</h1>
+      <p>お探しのページは、移動または削除された可能性があります</p>
+    </article>
+  );
+
   return (
     <Layout location={location} title={siteTitle}>
       <SEO title="Not Found" />
       <div className="container">
         <div className="columns is-mobile is-centered has-text-centered">
           <div className="column is-two-thirds">
-            <section>
-              <article
-                className="blog-post not-found"
-                itemScope
-                itemType="http://schema.org/Article"
-              >
-                <h1>Not Found</h1>
-                <p>お探しのページは、移動または削除された可能性があります</p>
-              </article>
-            </section>
+            <section>{notFound}</section>
           </div>
         </div>
       </div>

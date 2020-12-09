@@ -3,6 +3,7 @@ title: 福井-東京間の帰省コストをハックする
 date: '2020-03-20T22:12:03.284Z'
 description: '私は現在東京在住ですが、地元は北陸地方の福井県です。そんな私の帰省ハックについてご紹介します。'
 category: 'life-hack'
+img: 'https://res.cloudinary.com/fooqoo/image/upload/v1588754810/fooqoo%20memo/train_qu1zgb.jpg'
 ---
 
 私は現在都内に住んでいるが、実家は北陸の福井県にある。
@@ -53,7 +54,7 @@ category: 'life-hack'
    こちらは、JR の運賃が長距離になるほど、1km あたりの運賃が安くなることを利用した方法だ。  
    以下の乗車券のように、東京発東京着かつ一筆書きになるようにすることで、運賃を安くすることができる。
 
-![Ticket](./ticket.jpg)
+![Ticket](https://res.cloudinary.com/fooqoo/image/upload/v1588754810/fooqoo%20memo/ticket_ztu4mt.jpg)
 
 このプランによる運賃は以下。
 

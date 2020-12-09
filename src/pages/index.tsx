@@ -27,35 +27,38 @@ const BlogIndex: React.FC<PageProps<GatsbyTypes.BlogIndexQuery>> = ({
     );
   }
 
+  const blogList = (
+    <ol style={{ listStyle: `none` }}>
+      {posts.map(post => {
+        return (
+          <BlogListItem
+            title={post.frontmatter?.title || post.fields?.slug || ''}
+            link={post.fields?.slug || ''}
+            date={post.frontmatter?.date || ''}
+            img={post.frontmatter?.img || ''}
+            innerHtml={post.frontmatter?.description || post.excerpt || ''}
+          />
+        );
+      })}
+    </ol>
+  );
+
+  const profile = (
+    <div className="bio">
+      <Profile />
+    </div>
+  );
+
   return (
     <Layout location={location} title={siteTitle}>
-      <SEO title="HOME" />
+      <SEO title="" />
       <div className="container has-text-left post-list-item">
         <div className="columns">
           <div className="column is-two-thirds">
-            <section>
-              <ol style={{ listStyle: `none` }}>
-                {posts.map(post => {
-                  return (
-                    <BlogListItem
-                      title={post.frontmatter?.title || post.fields?.slug || ''}
-                      link={post.fields?.slug || ''}
-                      date={post.frontmatter?.date || ''}
-                      innerHtml={
-                        post.frontmatter?.description || post.excerpt || ''
-                      }
-                    />
-                  );
-                })}
-              </ol>
-            </section>
+            <section>{blogList}</section>
           </div>
           <div className="column is-one-thirds">
-            <section>
-              <div className="bio">
-                <Profile />
-              </div>
-            </section>
+            <section>{profile}</section>
           </div>
         </div>
       </div>
@@ -87,6 +90,7 @@ export const pageQuery = graphql`
           title
           description
           category
+          img
         }
       }
     }
