@@ -7,7 +7,6 @@
 
 import React from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
-import Image from 'gatsby-image';
 
 /**
  * プロフィールカードコンポーネント
@@ -46,13 +45,10 @@ const Profile = () => {
     <div className="profile">
       <div className="profile-background-pattern">
         {avatar && (
-          <Image
-            fixed={avatar}
+          <img
+            src="/image/v1588754816/beluga_jwpply.jpg"
             alt={author?.name || ``}
             className="avator"
-            imgStyle={{
-              borderRadius: `50%`,
-            }}
           />
         )}
       </div>
