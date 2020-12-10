@@ -3,7 +3,7 @@ title: サイトリニューアルに参加しました
 date: '2020-12-07T22:12:03.284Z'
 description: '丸善不動産商事様のコーポレートリニューアルに参加しました。'
 category: 'dev'
-img: 'https://res.cloudinary.com/fooqoo/image/upload/v1588754809/fooqoo%20memo/engineer_c9cdth.jpg'
+img: '/image/v1588754809/engineer_c9cdth.jpg'
 ---
 
 デザイン・開発を担当したコーポレートページがリリースされました  
