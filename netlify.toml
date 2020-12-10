@@ -8,3 +8,10 @@ Strict-Transport-Security = "max-age=2592000"
 X-Content-Type-Options = "nosniff"
 X-Frame-Options = "DENY"
 X-XSS-Protection = "1; mode=block"
+
+[[redirects]]
+force = true
+from = "/image/:id/:name"
+headers = {X-From = "Netlify"}
+status = 200
+to = "https://res.cloudinary.com/fooqoo/image/upload/f_auto,q_auto:low,w_600/:id/fooqoo%20memo/:name"
