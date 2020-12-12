@@ -32,7 +32,7 @@ collections:
         }
       - {
           label: 'Thumbnail',
-          name: 'thumbnail',
+          name: 'img',
           widget: 'hidden',
           default: '/image/v1597458694/teachers-desk-calendar_ifel3u.jpg',
         }
