@@ -30,4 +30,10 @@ collections:
           widget: 'hidden',
           default: 'daily',
         }
+      - {
+          label: 'Thumbnail',
+          name: 'thumbnail',
+          widget: 'hidden',
+          default: '/image/v1597458694/teachers-desk-calendar_ifel3u.jpg',
+        }
       - { label: 'Body', name: 'body', widget: 'markdown' }
