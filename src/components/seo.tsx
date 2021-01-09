@@ -85,7 +85,9 @@ const SEO: React.FC<SeoProps> = ({ description, lang, meta, title }) => {
           content: metaDescription,
         },
       ].concat(meta || [])}
-    />
+    >
+      <script src="/js/v1610187143/twitterUniversalTag_a2u97q.js" />
+    </Helmet>
   );
 };
 
